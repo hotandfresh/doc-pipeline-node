@@ -1,3 +1,11 @@
+
+Collaborators:
+@Bomibear
+Travis Cox
+Joachen Busch
+Fabian Brooks 
+Renee Messick
+
 # Step by Step Instructions
 
 - Create a .env file. Set `PORT=8081`
