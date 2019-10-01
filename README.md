@@ -25,7 +25,7 @@ const app = express();
 app.use(cors());
 ```
 
-- Install Httpie on a mac. On windows use Brew and the command is "brew install httpie"
+- Install Httpie. On Mac use Brew and the command is "brew install httpie".  Windows user can use "npm install httpie"
 - Run the server with the command "npm start"
 ![site deployment success](/resources/initialSetupTest.JPG)
 - Open another terminal tab. From the same directory, type in `http :8081`
