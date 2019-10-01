@@ -8,6 +8,7 @@ Renee Messick
 
 # Step by Step Instructions
 
+- Clone this [repo](https://github.com/codefellows/deployment-app-node)
 - Create a .env file. Set `PORT=8081`
 - Copy this chunk of code into index.js:
 
@@ -24,9 +25,11 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(cors());
 ```
-
-- Install Httpie. On Mac use Brew and the command is "brew install httpie".  Windows user can use "npm install httpie"
-- Run the server with the command "npm start"
+- In terminal, in that directory just created, type ```npm install```
+- Then run ```npm install dotenv cors express```
+- Install Httpie. On Mac use Brew and the command is ```brew install httpie```. If you haven't used Brew in awhile, it'll take a awhile to install httpie.
+  - Windows user can use ```npm install httpie```
+- Run the server with the command ```npm start```
 ![site deployment success](/resources/initialSetupTest.JPG)
 - Open another terminal tab. From the same directory, type in `http :8081`
 ![site deployment success](/resources/httpRunningServer.JPG)
@@ -57,16 +60,12 @@ app.use(cors());
 - Back to ElasticBeanstalk
   - upload that zip file
 
-If all goes well, the link on the ElasticBeanstalk page should load the information from index.js which was the output shown above. The deployed link is [here](http://deploymentappnode-env.2j8zpbdnds.us-west-2.elasticbeanstalk.com/) and that will look like this ![site deployment success](/resources/deployedSiteSuccess.png)
+If all goes well, the link on the ElasticBeanstalk page should load the information from index.js which was the JSON output shown above. The deployed link is [here](http://deploymentappnode-env.2j8zpbdnds.us-west-2.elasticbeanstalk.com/) and that will look like this ![site deployment success](/resources/deployedSiteSuccess.png)
 
 - Now change the output of server.js to something like this:
   ![change the code](/resources/changingTheCodeToSaySomething.png)
 - ACP changes to master, which will trigger the CodePipeline to look like this ![code pipeline redeploy](/resources/pipelineRedeploy.png)
 - Go back to the deployed site and the changes will now appear and look like this ![changes are deployed](/resources/changesAreDeployed.png)
-
-# Troubleshooting tips
-
-## Potential Roadblocks or Trouble Spots
 
 # Proving the Pipeline Works
 
