@@ -53,7 +53,7 @@ app.use(cors());
    ![site deployment success](/resources/pipeline-step2.JPG)
   - create a new user instead of using an existing one
   - connect to the AWS elasticbeanstalk env that was created earlier.
-   ![site deployment success](/resources/pipeline-step4.JPG)
+   ![site deployment success](/resources/pipeline-step3-step4.JPG)
   - You should see something like this:
     ![pipeline successful setup](/resources/pipelineSuccess.png)
 - in the terminal, within the directory for this code body, zip up the code so that it can be uploaded to ElasticBeanstalk with this command: `zip -r pipeline.zip .`
